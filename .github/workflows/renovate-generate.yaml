@@ -1,0 +1,14 @@
+name: Renovate Generate
+
+on:
+  push:
+    branches:
+      - "renovate/**"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    uses: openmcp-project/build/.github/workflows/renovate-generate.lib.yaml@4b630b967035fc401a59b1cff2129d39bb160ea8 # main
+    secrets: inherit
